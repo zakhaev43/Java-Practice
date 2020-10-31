@@ -1,6 +1,6 @@
 package TemplateMethod_SM;
 
-abstract class Generalization {
+public abstract class Generalization {
     // 1. Standardize the skeleton of an algorithm in a "template" method
     void findSolution() {
         stepOne();
