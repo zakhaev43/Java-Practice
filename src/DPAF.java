@@ -1,27 +1,26 @@
-import factoryPattern.*;
+import abstractFactoryPattern.*;
 public class DPAF {
-    public static void main(String[] args) {
-    	
-    	
-    	ShapeFactory shapeFactory = new ShapeFactory();
-
-        //get an object of Circle and call its draw method.
-        Shape shape1 = shapeFactory.getShape("CIRCLE");
-
-        //call draw method of Circle
-        shape1.draw();
-
-        //get an object of Rectangle and call its draw method.
-        Shape shape2 = shapeFactory.getShape("RECTANGLE");
-
-        //call draw method of Rectangle
-        shape2.draw();
-
-        //get an object of Square and call its draw method.
-        Shape shape3 = shapeFactory.getShape("SQUARE");
-
-        //call draw method of square
-        shape3.draw();
-       
-    }
+	 public static void main(String[] args) {
+	      //get shape factory
+	      AbstractFactory shapeFactory = FactoryProducer.getFactory(false);
+	      //get an object of Shape Rectangle
+	      Shape shape1 = shapeFactory.getShape("RECTANGLE");
+	      //call draw method of Shape Rectangle
+	      shape1.draw();
+	      //get an object of Shape Square 
+	      Shape shape2 = shapeFactory.getShape("SQUARE");
+	      //call draw method of Shape Square
+	      shape2.draw();
+	      //get shape factory
+	      AbstractFactory shapeFactory1 = FactoryProducer.getFactory(true);
+	      //get an object of Shape Rectangle
+	      Shape shape3 = shapeFactory1.getShape("RECTANGLE");
+	      //call draw method of Shape Rectangle
+	      shape3.draw();
+	      //get an object of Shape Square 
+	      Shape shape4 = shapeFactory1.getShape("SQUARE");
+	      //call draw method of Shape Square
+	      shape4.draw();
+	      
+	   }
 }
