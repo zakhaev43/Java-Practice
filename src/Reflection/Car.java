@@ -2,8 +2,8 @@ package Reflection;
 
 public class Car {
 
-   public int id;
-   public String modelname;
+   private int id;
+   private String modelname;
 
 
     public Car(int id, String modelname) {
@@ -21,10 +21,22 @@ public class Car {
     public String getModelname() {
         return modelname;
     }
+    public void setModelname(String modelname) {
+        this.modelname = modelname;
+    }
+
 
    public void horn()
    {
     System.out.println("PiPi");
+   }
+   public  static void staticHorn()
+   {
+    System.out.println("This is static method");
+   }
+   private void privateHorn()
+   {
+    System.out.println("Sorry, I am private horn");
    }
     @Override
     public int hashCode() {
@@ -52,10 +64,7 @@ public class Car {
             return false;
         return true;
     }
-    public void setModelname(String modelname) {
-        this.modelname = modelname;
-    }
-
+    
     
     
 }
